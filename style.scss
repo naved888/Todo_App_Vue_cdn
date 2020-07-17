@@ -1,0 +1,96 @@
+ body {
+     background-color: rgb(243, 243, 243);
+     font-family: 'Open Sans', sans-serif;
+ }
+ .main-section {
+     margin: 0 auto;
+     margin-top: 80px;
+     background-color: #fff;
+     padding: 2px;
+     box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.29);
+     max-width: 800px;
+     h1 {
+         background-color: #fff;
+         display: inline-block;
+     }
+     .plus {
+         background-color: #fff;
+         float: right;
+         cursor: pointer;
+         padding: 16px;
+     }
+     #addlist {
+         margin-left: 20px;
+     }
+ }
+ .main-section-1 {
+     margin: 0 auto;
+     margin-top: 80px;
+     background-color: #fff;
+     padding: 2px;
+     padding-bottom: 4px;
+     box-shadow: 2px 4px 13px 0px rgba(0, 0, 0, 0.29);
+     max-width: 800px;
+     h1 {
+         background-color: #ffeeba;
+         color: black;
+         padding: 10px;
+         padding: 10px;
+         display: flow-root;
+         #filter {
+             font-size: medium;
+             float: right;
+             margin: 14px;
+             width: 103px;
+         }
+         img {
+             background-color: #ffeeba;
+             padding-right: 10px;
+             cursor: pointer;
+         }
+     }
+ }
+ .trash {
+     float: right;
+     cursor: pointer;
+     padding: 0px;
+ }
+ .listitems {
+     background-color: #fff;
+     #status {
+         margin-left: -32px;
+         margin-right: 20px;
+     }
+     ul {
+         background-color: #fff;
+         li {
+             padding: 10px;
+             list-style: none;
+             background-color: #fff;
+             border-bottom: 1px solid gray;
+             word-wrap: break-word;
+             span {
+                 background-color: #fff;
+             }
+         }
+     }
+     #inputItem {
+         width: 100%;
+     }
+     img {
+         float: right;
+         cursor: pointer;
+     }
+     .done {
+         text-decoration: line-through;
+     }
+ }
+ a {
+     word-wrap: break-word;
+     text-decoration: none;
+     color: black;
+     :hover {
+         text-decoration: none;
+         color: black;
+     }
+ }

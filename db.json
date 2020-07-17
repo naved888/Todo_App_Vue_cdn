@@ -1,0 +1,63 @@
+{
+    "todos": [{
+        "id": 1,
+        "name": "Grocery Shopping",
+        "listItem": [{
+                "id": 1,
+                "name": "Apples",
+                "status": false
+            },
+            {
+                "id": 2,
+                "name": "Dal",
+                "status": false
+            },
+            {
+                "id": 3,
+                "name": "Rice",
+                "status": false
+            },
+            {
+                "id": 4,
+                "name": "Mangoes",
+                "status": false
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Movies to watch",
+        "listItem": [{
+                "id": 1,
+                "name": "Avengers",
+                "status": false
+            },
+            {
+                "id": 2,
+                "name": "Lords of the rings",
+                "status": false
+            },
+            {
+                "id": 3,
+                "name": "Justice League",
+                "status": false
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Steps to follow",
+        "listItem": [{
+                "id": 1,
+                "name": "Doctor checkup",
+                "status": false
+            },
+            {
+                "id": 2,
+                "name": "Gym Addmission",
+                "status": false
+            }
+        ]
+    }
+]
+}
