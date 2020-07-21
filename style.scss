@@ -19,6 +19,7 @@
          cursor: pointer;
          padding: 16px;
      }
+     
      #addlist {
          margin-left: 20px;
      }
@@ -94,3 +95,9 @@
          color: black;
      }
  }
+ .active {
+    display: block;
+}
+.deactive {
+    display: none;
+}

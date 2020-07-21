@@ -115,4 +115,12 @@ a :hover {
   text-decoration: none;
   color: black;
 }
+
+.active {
+  display: block;
+}
+
+.deactive {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */

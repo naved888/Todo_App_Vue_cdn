@@ -45,7 +45,7 @@ let item = {
         data() {
             return {
                 listName: "",
-                listItem: []
+                listItem: [],
             };
         },
         computed: {
@@ -120,12 +120,10 @@ let item = {
             },
             done(item) {
                 store.state.todos.forEach((todo) => {
-                    console.log(todo.listItem)
                     const listIndex = this.listItem.indexOf(item);
-                    console.log(listIndex)
-                    if (todo.listItem[listIndex].status == false) {
+                    if (todo.listItem[listIndex].status == false && parseInt(this.$route.params.id) === todo.id) {
                         todo.listItem[listIndex].status = true;
-                    } else {
+                    } else if(parseInt(this.$route.params.id) === todo.id) {
                         todo.listItem[listIndex].status = false;
                     }
                     axios.put("http://localhost:3000/todos/" + todo.id, todo);
@@ -146,7 +144,7 @@ let item = {
                 <img src="../assets/trash.png" alt="" @click="deleteList(item)"></li>
         </ul>
         <div class="d-flex">
-            <input type="text" name="" id="inputItem" v-on:keyup.enter="addItem()">
+            <input type="text"  id="inputItem" >
             <button  @click.prevent="addItem()">Add</button>
         </div>
     </div>
@@ -230,36 +228,33 @@ let todositem = {
 let Todos = {
 methods: {
         showModal() {
-            let a = document.getElementById("addList");
-            if (a.style.display === "none") {
-                a.style.display = "block";
-            } else {
-                a.style.display = "none";
-            }
+            this.isActive = true
+            this.notActive = false
         },
         addListItem() {
-            this.listName = document.getElementById("inputItem").value;
             store.dispatch("addTodos", {
                 id: new Date().getTime(),
-                name: this.listName,
-            });
+                name: this.textInput,
+            });    
         },
-    },
-    data() {
-        return {
-            listName: "",
-        };
     },
     components: {
         list: list,
+    },
+    data() {
+        return {
+            textInput: '',
+            isActive: false,
+            notActive: true
+        }
     },
     name: "todos",
     template: `
     <div class="main-section">
         <h1>To Do Lists</h1>
-        <img src="../assets/more.png" class="plus" @click="showModal()">
-        <div id="addList" style="display:none">
-            <input type="text" id="inputItem" size="89"></input>
+        <img src="../assets/more.png" class="plus"  @click="showModal()">
+        <div id="addList"  v-bind:class="{ active: isActive, deactive: notActive }">
+            <input type="text" id="inputItem" v-model="textInput" size="89"></input>
             <button @click="addListItem()">Add</button>
         </div>
         <list ></list>   
